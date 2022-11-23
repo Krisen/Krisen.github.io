@@ -96,7 +96,7 @@ body {
 }
 .main__container {
   background-color: #fefcff;
-  min-height: 100vh;
+  max-height: 100vh;
   @media (max-width: 1050px) {
     max-height: 100%;
   }
