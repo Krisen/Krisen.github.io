@@ -1,0 +1,424 @@
+@import "_zero.scss";
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;0,900;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body::-webkit-scrollbar {
+  width: 14px;
+}
+body::-webkit-scrollbar-track {
+  background-color: #444;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #222;
+  border-radius: 20px;
+  border: 3px solid #444;
+}
+body::-webkit-scrollbar-thumb:active {
+  background-color: #111;
+  border-radius: 20px;
+}
+a.link:active,
+a.link:hover {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+a.link {
+  text-decoration: none;
+  color: #f0f0f0;
+}
+body {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: "Lato";
+  &.lock {
+    overflow: hidden;
+  }
+}
+.wrapper {
+  padding-top: 76px;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #121212;
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 1 auto;
+}
+.container {
+  max-width: 85%;
+  margin: 0 auto;
+}
+.header {
+  position: fixed;
+  z-index: 4;
+  background-color: #1a1a1a;
+  height: 66px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  transition: transform 0.2s linear;
+}
+.header.hide {
+  transform: translateY(-66px);
+}
+.header__menu {
+}
+.menu__order {
+  padding: 7px 0 10px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.menu__item {
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  display: inline-block;
+  font-size: 17px;
+  color: #fefcff;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+.main {
+  max-width: 85%;
+  margin: 0 auto;
+  background-color: #222;
+  border: solid 1px #1a1a1a;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgb(14, 4, 4);
+  padding: 25px;
+}
+.font-main {
+  font-size: 16.5px;
+  letter-spacing: 1px;
+  line-height: 22px;
+}
+.main__container {
+  z-index: 12;
+  background-color: #222;
+  max-height: 100vh;
+  @media (max-width: 1050px) {
+    max-height: 100%;
+  }
+}
+.main__row {
+  z-index: 13;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.item__active {
+  border-bottom: solid 2px #f0f0f0;
+}
+.menu__item:hover {
+  user-select: none;
+  cursor: pointer;
+  color: #1a1a1a;
+  background-color: #f0f0f0;
+  transition: all 0.5s;
+  .item__active {
+    border-bottom: solid 2px #1a1a1a;
+    transition: border-bottom 1s;
+  }
+}
+.menu__item:hover a {
+  display: block;
+  height: 100%;
+}
+.menu__item:not(:hover) {
+  transition: all 0.3s;
+}
+.menu__item:active {
+  background-color: rgb(225, 211, 255);
+  transition: none;
+}
+
+.footer {
+  margin: 10px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a1a;
+}
+
+.footer__row {
+  display: flex;
+  height: 50px;
+}
+.footer__text {
+  opacity: 0.5;
+  color: #f0efe8;
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+}
+.main__body {
+  max-width: 890px;
+  margin: 0 auto;
+}
+.main__column {
+  background-color: #121212;
+  color: #eeeeee;
+  max-width: 100%;
+  box-shadow: 0 0 5px #111;
+  border-radius: 10px;
+  border: solid 1px #111;
+  padding: 20px 10px;
+  flex: 0 1 47%;
+  display: flex;
+  margin-bottom: 30px;
+  @media (max-width: 1050px) {
+    flex: 0 1 70%;
+    margin: 0 auto 30px auto;
+  }
+  @media (max-width: 770px) {
+    flex: 0 1 90%;
+  }
+  @media (max-width: 550px) {
+    flex-wrap: wrap;
+    flex: 0 1 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.main__items {
+  display: flex;
+  flex-direction: column;
+}
+.main__img {
+  z-index: 3;
+  margin: 0 auto;
+  max-width: 300px;
+  max-height: 300px;
+  @media (max-width: 770px) {
+    max-width: 250px;
+    max-height: 250px;
+  }
+  @media (max-width: 550px) {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+.main__pic {
+  display: block;
+  margin: 0 auto;
+  max-width: 200px;
+  max-height: 200px;
+  @media (max-width: 770px) {
+    max-width: 200px;
+    max-height: 200px;
+  }
+  @media (max-width: 550px) {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+.main__subtitle {
+  text-align: center;
+  margin: 10px 0 10px 0;
+  font-family: Roboto;
+  font-size: 20px;
+}
+.main__text {
+  margin: 10px 0 10px 10px;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  @media (max-width: 770px) {
+    font-size: 16.5px;
+  }
+}
+.main__button {
+  height: 35px;
+  font-size: 15px;
+  line-height: 35px;
+  text-align: center;
+  display: block;
+  font-family: Roboto;
+  background-color: #00897b;
+  color: #fff;
+  border-radius: 10px;
+  border: solid 1px #111;
+}
+.main__button:hover {
+  background-color: #bdbdbd;
+  color: #111;
+  transition: background-color 0.5s;
+}
+.main__button:not(:hover) {
+  transition: background-color 0.5s;
+}
+.main__button:active {
+  background-color: #333;
+}
+.main__data {
+  position: relative;
+  text-align: right;
+  color: #333;
+  opacity: 0.6;
+  font-size: 12px;
+  font-family: "Roboto";
+}
+.br {
+  margin: 10px 0 0 0;
+}
+.main__spoiler p {
+  text-indent: 0;
+}
+.main__title-spoiler {
+  z-index: 1;
+  letter-spacing: 1px;
+  position: relative;
+  margin: 0 0 0 3px;
+  padding: 0 0 0 20px;
+  cursor: pointer;
+  font-size: 15px;
+  z-index: 2;
+  // user-select: none;
+  @media (max-width: 720px) {
+    font-size: 18px;
+  }
+}
+.main__title-spoiler::before,
+.main__title-spoiler::after {
+  content: "";
+  width: 8px;
+  height: 1px;
+  background-color: #1a1a1a;
+  position: absolute;
+  top: 8.5px;
+  right: 9px;
+  transition: all 0.3s ease 0s;
+}
+.main__title-spoiler::before {
+  transform: rotate(40deg);
+  left: 0;
+}
+.main__title-spoiler::after {
+  transform: rotate(-40deg);
+  left: 5px;
+}
+.main__title-spoiler.active::before,
+.main__title-spoiler.active::after {
+  background-color: red;
+}
+.main__title-spoiler.active::before {
+  transform: rotate(-40deg);
+}
+.main__title-spoiler.active::after {
+  transform: rotate(40deg);
+}
+.main__item-spoiler {
+  margin: 0 0 20px 0;
+}
+.main__text-spoiler {
+  display: none;
+  padding: 7px 0 0 0;
+}
+.menu__icon {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  @media (max-width: 770px) {
+    &.active {
+      span {
+        transform: scale(0);
+        &:first-child {
+          transform: rotate(-45deg);
+          top: calc(50% - 1px);
+        }
+        &:last-child {
+          transform: rotate(45deg);
+          bottom: calc(50% - 1px);
+        }
+      }
+    }
+    display: block;
+    top: 26px;
+    width: 30px;
+    height: 18px;
+    position: relative;
+    z-index: 7;
+    cursor: pointer;
+    span {
+      position: absolute;
+      top: calc(50% - 1px);
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #f0f0f0;
+      transition: all 0.2s;
+      &:first-child {
+        top: 0;
+      }
+      &:last-child {
+        top: auto;
+        bottom: 0;
+      }
+    }
+  }
+}
+.menu__body {
+  z-index: 6;
+  @media (max-width: 770px) {
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    background-color: #1a1a1a;
+    display: flex;
+    transition: all 0.2s;
+  }
+  &.active {
+    left: 0;
+  }
+}
+.menu__order {
+  @media (max-width: 770px) {
+    flex-direction: column;
+    padding: 30px;
+    margin: auto;
+  }
+}
+.main__title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 500;
+  font-family: "Roboto";
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.main__textF {
+  font-family: "Roboto";
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.main__buttonF {
+  margin: 0 auto;
+  width: 300px;
+  height: 35px;
+  font-size: 15px;
+  line-height: 35px;
+  text-align: center;
+  display: block;
+  font-family: Roboto;
+  background-color: #fbff85;
+  color: #111;
+  border-radius: 10px;
+  border: solid 1px #111;
+}
+.main__buttonF:hover {
+  background-color: #111;
+  color: #f0f0f0;
+  transition: background-color 0.5s;
+}
+.main__buttonF:not(:hover) {
+  transition: background-color 0.5s;
+}
+.main__buttonF:active {
+  background-color: #333;
+}
