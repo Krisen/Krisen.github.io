@@ -26,8 +26,16 @@
     let feedback = document.getElementById("feedback");
     let safe = document.getElementById("safe");
     safe.addEventListener("click", () => {
-        tg.close;
+        let name = document.getElementById("name").value;
+        let age = document.getElementById("age").value;
+        let feedback = document.getElementById("feedback").value;
     });
+    let data = {
+        name: name,
+        age: age,
+        feedback: feedback
+    }
+    tg.sendData(JSON.stringify(data));
   </script>
   </body>
 </html>
