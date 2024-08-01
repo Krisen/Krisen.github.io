@@ -19,9 +19,10 @@
         <textarea id="feedback" name="feedback"></textarea><br><br>
         <button id="safe">Сохранить</button>
     </form>
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  </body>
   <script>
     let tg = window.Telegram.WebApp;
+    tg.expand()
     let name = document.getElementById("name");
     let age = document.getElementById("age");
     let feedback = document.getElementById("feedback");
@@ -38,5 +39,5 @@
     }
     tg.sendData(JSON.stringify(data));
   </script>
-  </body>
 </html>
+
