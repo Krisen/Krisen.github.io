@@ -27,17 +27,19 @@
     let age = document.getElementById("age");
     let feedback = document.getElementById("feedback");
     let safe = document.getElementById("safe");
-    safe.addEventListener("click", () => {
-        let name = document.getElementById("name").value;
-        let age = document.getElementById("age").value;
-        let feedback = document.getElementById("feedback").value;
-    });
     let data = {
         name: name,
         age: age,
         feedback: feedback
     }
-    tg.sendData(JSON.stringify(data));
+    safe.addEventListener("click", () => {
+        let name = document.getElementById("name").value;
+        let age = document.getElementById("age").value;
+        let feedback = document.getElementById("feedback").value;
+        tg.sendData(JSON.stringify(data));
+        tg.close()
+    });
   </script>
 </html>
+
 
