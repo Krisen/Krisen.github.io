@@ -19,6 +19,15 @@
         <textarea id="feedback" name="feedback"></textarea><br><br>
         <button id="safe">Сохранить</button>
     </form>
-  <script src="js/script.js"></script>
+  <script>
+    let tg = window.Telegram.WebApp;
+    let name = document.getElementById("name");
+    let age = document.getElementById("age");
+    let feedback = document.getElementById("feedback");
+    let safe = document.getElementById("safe");
+    safe.addEventListener("click", () => {
+        tg.close;
+    });
+  </script>
   </body>
 </html>
