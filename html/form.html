@@ -21,12 +21,18 @@
   </form>
 
   <script>
+    console.log("Script loaded");
+
     let tg = window.Telegram.WebApp;
     tg.expand();
+
+    console.log("Telegram WebApp expanded");
 
     let saveButton = document.getElementById("save");
 
     saveButton.addEventListener("click", function() {
+      console.log("Save button clicked");
+
       let name = document.getElementById("name").value;
       let age = document.getElementById("age").value;
       let feedback = document.getElementById("feedback").value;
@@ -37,10 +43,33 @@
         feedback: feedback
       };
 
+      console.log("Data to send:", data);
+
+      tg.sendData(JSON.stringify(data));
+      tg.close();
+    });
+
+    tg.MainButton.setText("Сохранить");
+    tg.MainButton.show();
+
+    Telegram.WebApp.onEvent("mainButtonClicked", function() {
+      console.log("Main button clicked");
+
+      let name = document.getElementById("name").value;
+      let age = document.getElementById("age").value;
+      let feedback = document.getElementById("feedback").value;
+
+      let data = {
+        name: name,
+        age: age,
+        feedback: feedback
+      };
+
+      console.log("Data to send from main button:", data);
+
       tg.sendData(JSON.stringify(data));
       tg.close();
     });
   </script>
 </body>
 </html>
-
