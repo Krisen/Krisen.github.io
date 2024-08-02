@@ -10,7 +10,7 @@
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <h1>CHILLLLLLLLLLLLLLLLLLL</h1>
+  <h1>???????</h1>
   <form id="survey-form">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name"><br><br>
@@ -27,12 +27,6 @@
 
     let saveButton = document.getElementById("save");
 
-    let data = {
-        name: name,
-        age: age,
-        feedback: feedback
-      };
-
     tg.MainButton.show();
     tg.MainButton.setText("Оплатить");
 
@@ -41,6 +35,12 @@
       let name = document.getElementById("name").value;
       let age = document.getElementById("age").value;
       let feedback = document.getElementById("feedback").value;
+
+      let data = {
+        name: name,
+        age: age,
+        feedback: feedback
+      };
 
       tg.sendData(JSON.stringify(data));
 
