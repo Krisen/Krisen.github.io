@@ -10,7 +10,7 @@
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <h1>???????</h1>
+  <h1>Survey</h1>
   <form id="survey-form">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name"><br><br>
@@ -32,14 +32,11 @@
 
     tg.MainButton.onClick(() => {
       console.log("start");
-      let name = document.getElementById("name").value;
-      let age = document.getElementById("age").value;
-      let feedback = document.getElementById("feedback").value;
 
       let data = {
-        name: name,
-        age: age,
-        feedback: feedback
+        name: document.getElementById("name").value,
+        age: document.getElementById("age").value,
+        feedback: document.getElementById("feedback").value
       };
 
       tg.sendData(JSON.stringify(data));
